@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border: 7px solid #262626;
+  border-radius: 5px;
+  margin-top: 10rem;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  border-radius: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.login-form > * {
+  margin-top: 2rem;
+}
+.login-btn {
+  margin-bottom: 2rem;
+  width: 6rem;
+  background-color: #262626;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+.login-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.img-box {
+  width: 100px;
+}
+
+.login-form img:hover {
+  opacity: 30%;
+  cursor: pointer;
+}
