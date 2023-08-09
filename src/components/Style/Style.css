@@ -1,0 +1,29 @@
+.app-container {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 600px) {
+  .Messages-list {
+    width: 80%;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .Messages-list {
+    width: 80%;
+  }
+}
+/* Tablet Portrait */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .Messages-list {
+    width: 80%;
+  }
+}

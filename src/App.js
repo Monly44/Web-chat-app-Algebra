@@ -2,6 +2,7 @@ import React from "react";
 import Chat from "./components/Chat";
 import Header from "./components/Header";
 import Login from "./components/Login";
+import "./components/Style/Style.css"; // Import your main CSS file here
 
 class App extends React.Component {
   constructor(props) {
@@ -21,11 +22,8 @@ class App extends React.Component {
     const { username } = this.state;
 
     return (
-      <div>
-        <Header
-          username={username}
-          handleLogout={this.handleLogout}
-        />
+      <div className="app-container">
+        <Header username={username} handleLogout={this.handleLogout} />
         {username ? (
           <Chat username={username} />
         ) : (

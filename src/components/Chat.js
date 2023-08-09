@@ -1,7 +1,7 @@
 import Messages from "./Messages";
 import React from "react";
 import Input from "./Input";
-import "./Chat.css";
+import "./Style/Style.css";
 
 function randomColor() {
   return "#" + Math.floor(Math.random() * 0xfffffa).toString(16);
@@ -25,7 +25,11 @@ class Chat extends React.Component {
     // ---
     room.on("data", (data, member) => {
       const messages = this.state.messages;
-      messages.push({ member, text: data });
+      messages.push({
+        member,
+        text: data,
+        timestamp: new Date(), // Add the timestamp property
+      });
       this.setState({ messages });
     });
   }

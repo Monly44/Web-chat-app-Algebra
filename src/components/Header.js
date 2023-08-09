@@ -1,3 +1,5 @@
+import "./Style/Header.css";
+
 const Header = (props) => {
   const isLoggedIn = !!props.username;
   return (

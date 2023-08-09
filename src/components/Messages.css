@@ -1,0 +1,104 @@
+.text-container {
+  position: relative;
+  display: inline-block;
+  margin: 6px 0;
+}
+
+.text-container:hover .timestamp {
+  display: block;
+}
+.timestamp {
+  display: none;
+  position: absolute;
+  bottom: -25px; /* Adjust the spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.Messages-list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  list-style: none;
+  padding-left: 0;
+  height: 60vh;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #868e96 #f7f7f7;
+  background-color: #fff;
+  border-radius: 50px;
+  border: 1px solid #868e96;
+}
+
+.Messages-list::-webkit-scrollbar {
+  width: 8px;
+}
+.Messages-list::-webkit-scrollbar-thumb {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message > .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.Message-content > .username {
+  display: block;
+  color: gray;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding-bottom: 4px;
+  letter-spacing: 3px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: #868e96;
+  color: white;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.currentMember > .Message-content .text {
+  background-color: #262626;
+}
+.text {
+  display: inline-block;
+  padding: 8px 12px; /* Add padding to the text bubble */
+  background-color: #4caf50; /* Change to your desired background color */
+  color: white; /* Change to your desired text color */
+  border-radius: 16px; /* Add rounded corners */
+}

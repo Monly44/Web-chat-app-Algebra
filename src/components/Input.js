@@ -1,6 +1,6 @@
 import { Component } from "react";
 import React from "react";
-
+import "./Style/Input.css";
 class Input extends Component {
   state = {
     text: "",
@@ -17,18 +17,16 @@ class Input extends Component {
 
   render() {
     return (
-      <div className="Input">
-        <form onSubmit={(e) => this.onSubmit(e)}>
-          <input
-            onChange={(e) => this.onChange(e)}
-            value={this.state.text}
-            type="text"
-            placeholder="Enter your message and press ENTER"
-            autoFocus={true}
-          />
-          <button> </button>
-        </form>
-      </div>
+      <form onSubmit={(e) => this.onSubmit(e)}>
+        <input
+          onChange={(e) => this.onChange(e)}
+          value={this.state.text}
+          type="text"
+          placeholder="Enter your message and press ENTER"
+          autoFocus={true}
+        />
+        <button>Send</button>
+      </form>
     );
   }
 }
