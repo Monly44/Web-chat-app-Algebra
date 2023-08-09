@@ -1,11 +1,12 @@
-import Messages from "./Messages";
 import React from "react";
+import Messages from "./Messages";
 import Input from "./Input";
 import "./Style/Style.css";
 
 function randomColor() {
   return "#" + Math.floor(Math.random() * 0xfffffa).toString(16);
 }
+
 class Chat extends React.Component {
   constructor(props) {
     super(props);
@@ -40,14 +41,33 @@ class Chat extends React.Component {
       username: this.props.username,
       color: randomColor(),
     },
+    selectedImage: null, // To store the selected image file
   };
+
   onSendMessage = (message) => {
-    // quick fix for sending empty message
-    if (message.length === 0) return;
-    this.drone.publish({
-      room: "observable-room",
-      message,
-    });
+    if (message.trim() === "" && !this.state.selectedImage) return;
+
+    if (this.state.selectedImage) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const imageDataUrl = event.target.result;
+        this.drone.publish({
+          room: "observable-room",
+          message: imageDataUrl,
+        });
+        this.setState({ selectedImage: null }); // Clear selected image after sending
+      };
+      reader.readAsDataURL(this.state.selectedImage);
+    } else {
+      this.drone.publish({
+        room: "observable-room",
+        message,
+      });
+    }
+  };
+
+  handleImageChange = (selectedImage) => {
+    this.setState({ selectedImage });
   };
 
   render() {
@@ -57,7 +77,11 @@ class Chat extends React.Component {
           messages={this.state.messages}
           currentMember={this.state.member}
         />
-        <Input onSendMessage={this.onSendMessage} />
+        <Input
+          onSendMessage={this.onSendMessage}
+          handleImageChange={this.handleImageChange}
+          selectedImage={this.state.selectedImage}
+        />
       </div>
     );
   }

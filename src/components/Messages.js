@@ -6,7 +6,6 @@ class Messages extends React.Component {
     const { messages } = this.props;
     return (
       <ul className="Messages-list">
-        <div></div>
         {messages.map((m) => this.renderMessage(m))}
       </ul>
     );
@@ -16,6 +15,7 @@ class Messages extends React.Component {
     const { member, text, timestamp } = message;
     const { currentMember } = this.props;
     const messageFromMe = member.id === currentMember.id;
+    const isImage = text.startsWith("data:image/"); // Check if the message is an image
     const className = messageFromMe
       ? "Messages-message currentMember"
       : "Messages-message";
@@ -25,14 +25,6 @@ class Messages extends React.Component {
       hour: "2-digit",
       minute: "2-digit",
     });
-
-    // Update chatWithInfo when receiving a message
-    if (member.clientData.username !== currentMember.username) {
-      this.props.updateChatWithInfo(
-        member.clientData.username,
-        member.clientData.avatar
-      );
-    }
 
     return (
       <li
@@ -46,7 +38,13 @@ class Messages extends React.Component {
         <div className="Message-content">
           <div className="username">{member.clientData.username}</div>
           <div className="text-container">
-            <div className="text">{text}</div>
+            {isImage ? (
+              <div className="image-preview">
+                <img src={text} alt="Received Image" />
+              </div>
+            ) : (
+              <div className="text">{text}</div>
+            )}
             <div className="timestamp">
               <div className="timestamp-date">{formattedDate}</div>
               <div className="timestamp-time">{formattedTime}</div>
