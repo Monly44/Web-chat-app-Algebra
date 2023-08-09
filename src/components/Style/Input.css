@@ -31,3 +31,21 @@ button:hover {
   background-color: #45a049;
   transform: scale(1.05);
 }
+/* Add this to your Input.css */
+/* ... (existing styles) */
+
+.image-preview {
+  max-width: 200px; /* Set the desired max width for the image preview */
+  max-height: 200px; /* Set the desired max height for the image preview */
+  margin-top: 10px;
+}
+
+.image-preview img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  border-radius: 8px; /* Add rounded corners */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* ... (existing styles) */

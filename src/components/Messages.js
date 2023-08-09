@@ -39,7 +39,7 @@ class Messages extends React.Component {
           <div className="username">{member.clientData.username}</div>
           <div className="text-container">
             {isImage ? (
-              <div className="image-preview">
+              <div className="image-sent">
                 <img src={text} alt="Received Image" />
               </div>
             ) : (

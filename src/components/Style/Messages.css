@@ -102,3 +102,16 @@
   color: white; /* Change to your desired text color */
   border-radius: 16px; /* Add rounded corners */
 }
+/* Add this to your Messages.css */
+/* ... (existing styles) */
+
+/* Style for sent images */
+.image-sent img {
+  max-width: 200px; /* Set the desired max width for sent images */
+  max-height: 200px; /* Set the desired max height for sent images */
+  border-radius: 8px; /* Add rounded corners to sent images */
+  object-fit: cover; /* Ensure the image fills the container while preserving aspect ratio */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* ... (existing styles) */
