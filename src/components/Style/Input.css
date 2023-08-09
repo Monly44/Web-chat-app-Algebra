@@ -49,3 +49,20 @@ button:hover {
 }
 
 /* ... (existing styles) */
+/* Your existing CSS */
+
+/* Add this to your CSS */
+.image-upload {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.image-icon {
+  width: 24px; /* Set the desired size */
+  height: 24px; /* Set the desired size */
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}

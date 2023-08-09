@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Style/Input.css";
+import imageIcon from "./Style/plus-circle-fill.svg"; // Provide the path to your image
 
 class Input extends Component {
   state = {
@@ -31,7 +32,16 @@ class Input extends Component {
           placeholder="Enter your message and press ENTER"
           autoFocus={true}
         />
-        <input type="file" accept="image/*" onChange={this.handleImageChange} />
+        <label htmlFor="file" className="image-upload">
+          <img src={imageIcon} alt="Upload" className="image-icon" />
+          <input
+            type="file"
+            id="file"
+            name="file"
+            accept="image/*"
+            onChange={this.handleImageChange}
+          />
+        </label>
         {this.props.selectedImage && (
           <div className="image-preview">
             <img
