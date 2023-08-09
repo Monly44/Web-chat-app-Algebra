@@ -24,34 +24,39 @@ class Input extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          onChange={this.onChange}
-          value={this.state.text}
-          type="text"
-          placeholder="Enter your message and press ENTER"
-          autoFocus={true}
-        />
-        <label htmlFor="file" className="image-upload">
-          <img src={imageIcon} alt="Upload" className="image-icon" />
-          <input
-            type="file"
-            id="file"
-            name="file"
-            accept="image/*"
-            onChange={this.handleImageChange}
-          />
-        </label>
-        {this.props.selectedImage && (
-          <div className="image-preview">
-            <img
-              src={URL.createObjectURL(this.props.selectedImage)}
-              alt="Preview"
+      <div className="input-container">
+        <form onSubmit={this.onSubmit}>
+          <div className="input-wrapper">
+            <input
+              className="Input-msg"
+              onChange={this.onChange}
+              value={this.state.text}
+              type="text"
+              placeholder="Enter your message and press ENTER"
+              autoFocus={true}
             />
+            <label htmlFor="file" className="image-upload">
+              <img src={imageIcon} alt="Upload" className="image-icon" />
+              <input
+                type="file"
+                id="file"
+                name="file"
+                accept="image/*"
+                onChange={this.handleImageChange}
+              />
+            </label>
           </div>
-        )}
-        <button>Send</button>
-      </form>
+          {this.props.selectedImage && (
+            <div className="image-preview">
+              <img
+                src={URL.createObjectURL(this.props.selectedImage)}
+                alt="Preview"
+              />
+            </div>
+          )}
+          <button>Send</button>
+        </form>
+      </div>
     );
   }
 }

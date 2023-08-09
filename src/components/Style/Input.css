@@ -1,38 +1,8 @@
 form {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+  display: inline-flex;
   max-width: 900px;
   margin: 0 auto 40px;
 }
-
-input {
-  flex-grow: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f5f5f5;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
-}
-/* Add this to your Input.css */
-/* ... (existing styles) */
 
 .image-preview {
   max-width: 200px; /* Set the desired max width for the image preview */
@@ -59,10 +29,65 @@ button:hover {
 }
 
 .image-icon {
-  width: 24px; /* Set the desired size */
-  height: 24px; /* Set the desired size */
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
 }
 
 .image-upload input[type="file"] {
   display: none;
+}
+
+/* ... (existing styles) */
+form {
+  align-items: baseline;
+  justify-content: space-evenly;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+
+.input-wrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+/* ... (existing styles) */
+.input-container {
+  height: 40px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  border: solid 1px #161817;
+  margin: 0 auto 20px; /* Decrease the margin to reduce overall height */
+  text-align: center;
+}
+
+.Input-msg {
+  flex-grow: 1;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+/* Adjust button size and padding */
+button {
+  height: 30px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px; /* Decrease padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Decrease font size */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
 }
