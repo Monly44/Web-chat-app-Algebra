@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Style/Login.css";
 import imageSource from "./Style/login.png";
+import imagePerson from "./Style/person-circle.svg";
 
 const Login = (props) => {
   const [usernameText, setUserNameText] = useState("");
@@ -21,7 +22,10 @@ const Login = (props) => {
         </div>
         <div className="login-inputs">
           <label htmlFor="title">
-            <h1>Stay in touch</h1>
+            <h1>
+              <img src={imagePerson} alt="Image" />
+              Stay in touch
+            </h1>
           </label>
           <input
             type="text"
