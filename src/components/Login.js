@@ -21,7 +21,7 @@ const Login = (props) => {
         </div>
         <div className="login-inputs">
           <label htmlFor="title">
-            <h1>Login</h1>
+            <h1>Stay in touch</h1>
           </label>
           <input
             type="text"

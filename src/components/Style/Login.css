@@ -18,12 +18,12 @@ body {
   position: absolute;
   background: linear-gradient(
     45deg,
-    #a04ffda0,
-    #ab5ef3bb,
-    #4383e9b1,
-    #6484faa3,
-    #907dfeaf,
-    #a364fba9
+    #a04ffd79,
+    #ab5ef385,
+    #4383e975,
+    #6484fa7a,
+    #907dfe7b,
+    #a364fb7a
   );
   background-size: 600% 100%;
   animation: gradient 20s linear infinite;
@@ -78,11 +78,14 @@ body {
   border-radius: 0 10px 10px 0;
   align-items: center;
 }
-
 .login-inputs h1 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #8a3ffb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.169);
 }
 
 .input-field {
@@ -108,18 +111,63 @@ body {
   background-color: #0056b3;
 }
 
-/* Responsive media queries */
+/* For screens up to 600px */
 @media screen and (max-width: 600px) {
   .Box-login {
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
+    border-radius: 10px; /* Keep rounded corners for mobile */
   }
 
   .img-box {
-    display: none; /* Hide the image box on smaller screens */
+    display: none;
   }
 
   .login-inputs {
     padding: 20px;
     background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+
+  .input-field,
+  .login-btn {
+    width: 100%; /* Make input fields and button full width */
+  }
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 600px) {
+  .img-box {
+    display: none;
+  }
+
+  .login-inputs {
+    background-color: #f9f9f9;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .img-box {
+    display: none;
+  }
+
+  .login-inputs {
+    background-color: #f9f9f9;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .Box-login {
+    flex-direction: row;
+  }
+
+  .img-box {
+    display: flex;
+  }
+
+  .login-inputs {
+    background-color: #c6e0e66a;
+  }
+
+  .input-field,
+  .login-btn {
+    width: 50%;
   }
 }
