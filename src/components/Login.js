@@ -17,7 +17,9 @@ const Login = (props) => {
     <div className="container">
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="img-container">
-          <img src={imageSource} alt="Image" className="img-box" />
+          <div className="img-box">
+            <img src={imageSource} alt="Image" />
+          </div>
         </div>
         <div className="login-inputs">
           <label htmlFor="title">
