@@ -1,36 +1,59 @@
 /* Adjust the form styles */
 form {
+  position: relative;
+  z-index: 5;
   display: inline-flex;
   max-width: 900px;
   margin: 0 auto 40px;
   align-items: baseline;
   justify-content: space-evenly;
   width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
-.image-preview {
-  position: absolute;
-  top: -220px; /* Adjust this value to position the preview above the chat */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  width: 200px; /* Set a fixed width for the preview */
-  height: 200px; /* Set a fixed height for the preview */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3; /* Ensure the preview appears above other elements */
+}
+
+.image-preview {
+  position: relative;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.close-preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  z-index: 1;
 }
 
 .image-preview img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 8px;
-  object-fit: cover; /* Use 'cover' to maintain aspect ratio and cover the container */
+  object-fit: cover;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust the image upload styles */
 .image-upload {
+  position: relative;
+  z-index: 1;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -38,6 +61,8 @@ form {
 }
 
 .image-icon {
+  position: relative;
+  z-index: 3;
   width: 24px;
   height: 24px;
 }
@@ -46,38 +71,34 @@ form {
   display: none;
 }
 
-/* Adjust the input wrapper styles */
 .input-wrapper {
   width: 90%;
   display: flex;
   align-items: center;
 }
 
-/* Adjust the input container styles */
 .input-container {
-  height: 40px; /* Increase the height to accommodate both inputs */
+  height: 40px;
   width: 100%;
   max-width: 900px;
   border-radius: 10px;
-  border: solid 1px #161817;
   margin: 0 auto 20px;
   text-align: center;
-  position: relative; /* Required for absolute positioning */
+  transition: background-color 0.3s ease;
 }
 
-/* Adjust the input message styles */
 .Input-msg {
+  z-index: 1;
   flex-grow: 1;
   width: 80%;
   padding: 10px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  background-color: #f5f5f5;
 }
 
-/* Adjust the button styles */
 button {
+  z-index: 1;
   height: 30px;
   background-color: #4caf50;
   color: white;

@@ -27,8 +27,12 @@ class Input extends Component {
   };
 
   render() {
+    const inputContainerClassName = this.props.selectedImage
+      ? "input-container"
+      : "input-container overlay-active";
+
     return (
-      <div className="input-container">
+      <div className={inputContainerClassName}>
         <form onSubmit={this.onSubmit}>
           <div className="input-wrapper">
             <input
@@ -50,7 +54,10 @@ class Input extends Component {
               />
             </label>
           </div>
-          {this.props.selectedImage && (
+          <button>Send</button>
+        </form>
+        {this.props.selectedImage && (
+          <div className="image-overlay">
             <div className="image-preview">
               <span className="close-preview" onClick={this.closePreview}>
                 &times;
@@ -60,9 +67,8 @@ class Input extends Component {
                 alt="Preview"
               />
             </div>
-          )}
-          <button>Send</button>
-        </form>
+          </div>
+        )}
       </div>
     );
   }
