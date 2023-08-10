@@ -15,11 +15,9 @@ const Login = (props) => {
 
   return (
     <div className="container">
-      <form className="login-form" onSubmit={handleSubmit}>
-        <div className="img-container">
-          <div className="img-box">
-            <img src={imageSource} alt="Image" />
-          </div>
+      <form className="Box-login" onSubmit={handleSubmit}>
+        <div className="img-box">
+          <img src={imageSource} alt="Image" />
         </div>
         <div className="login-inputs">
           <label htmlFor="title">
