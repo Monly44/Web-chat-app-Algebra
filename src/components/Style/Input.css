@@ -1,35 +1,43 @@
+/* Adjust the form styles */
 form {
   display: inline-flex;
   max-width: 900px;
   margin: 0 auto 40px;
+  align-items: baseline;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .image-preview {
-  max-width: 200px; /* Set the desired max width for the image preview */
-  max-height: 200px; /* Set the desired max height for the image preview */
-  margin-top: 10px;
+  position: absolute;
+  top: -220px; /* Adjust this value to position the preview above the chat */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 200px; /* Set a fixed width for the preview */
+  height: 200px; /* Set a fixed height for the preview */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3; /* Ensure the preview appears above other elements */
 }
 
 .image-preview img {
-  width: 100%; /* Make the image fill the container */
-  height: 100%; /* Make the image fill the container */
-  border-radius: 8px; /* Add rounded corners */
-  object-fit: cover; /* Maintain aspect ratio and fill the container */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: cover; /* Use 'cover' to maintain aspect ratio and cover the container */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* ... (existing styles) */
-/* Your existing CSS */
-
-/* Add this to your CSS */
+/* Adjust the image upload styles */
 .image-upload {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .image-icon {
-  margin-left: 10px;
   width: 24px;
   height: 24px;
 }
@@ -38,32 +46,26 @@ form {
   display: none;
 }
 
-/* ... (existing styles) */
-form {
-  align-items: baseline;
-  justify-content: space-evenly;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto 40px;
-}
-
+/* Adjust the input wrapper styles */
 .input-wrapper {
   width: 90%;
   display: flex;
   align-items: center;
 }
 
-/* ... (existing styles) */
+/* Adjust the input container styles */
 .input-container {
-  height: 40px;
+  height: 40px; /* Increase the height to accommodate both inputs */
   width: 100%;
   max-width: 900px;
   border-radius: 10px;
   border: solid 1px #161817;
-  margin: 0 auto 20px; /* Decrease the margin to reduce overall height */
+  margin: 0 auto 20px;
   text-align: center;
+  position: relative; /* Required for absolute positioning */
 }
 
+/* Adjust the input message styles */
 .Input-msg {
   flex-grow: 1;
   width: 80%;
@@ -74,16 +76,16 @@ form {
   background-color: #f5f5f5;
 }
 
-/* Adjust button size and padding */
+/* Adjust the button styles */
 button {
   height: 30px;
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 6px 12px; /* Decrease padding */
+  padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px; /* Decrease font size */
+  font-size: 14px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
