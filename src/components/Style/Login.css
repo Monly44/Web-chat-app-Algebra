@@ -1,53 +1,96 @@
 /* Login.css */
+body {
+  overflow: hidden;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+body {
+  margin: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    #a04ffda0,
+    #ab5ef3bb,
+    #4383e9b1,
+    #6484faa3,
+    #907dfeaf,
+    #a364fba9
+  );
+  background-size: 600% 100%;
+  animation: gradient 20s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
 
 .Box-login {
   display: flex;
-  align-items: stretch; /* Make both boxes stretch to the same height */
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: transparent;
 }
 
 .img-box {
-  flex: 1; /* Take up equal space */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f9f9f9;
+  background-color: #8f9ded;
+  border-radius: 10px 0 0 10px;
 }
 
 .img-box img {
-  max-width: 80%;
-  max-height: 100%;
+  max-width: 500px;
+  height: auto;
   display: block;
 }
 
 .login-inputs {
-  flex: 1; /* Take up equal space */
+  position: relative;
+  flex: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f9f9f9;
+  background-color: #c6e0e66a;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  align-items: center;
 }
 
 .login-inputs h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  margin-top: 0;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .input-field {
+  width: 50%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .login-btn {
+  margin-top: 5px;
+  width: 50%;
   padding: 10px;
   background-color: #007bff;
   color: white;
@@ -58,4 +101,20 @@
 
 .login-btn:hover {
   background-color: #0056b3;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 600px) {
+  .Box-login {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .img-box {
+    display: none; /* Hide the image box on smaller screens */
+  }
+
+  .login-inputs {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
 }
