@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Style/Login.css";
+import imageSource from "./Style/login.png"; // Replace with your image source
 
 const Login = (props) => {
   const [usernameText, setUserNameText] = useState("");
@@ -11,21 +12,28 @@ const Login = (props) => {
     props.onLogin(usernameText);
     navigate("/web-chat-app/");
   };
+
   return (
     <div className="container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor="title">
-          <h1>Login</h1>
-        </label>
-        <input
-          type="text"
-          id="title"
-          placeholder="Enter your username"
-          required
-          value={usernameText}
-          onChange={(e) => setUserNameText(e.target.value)}
-        ></input>
-        <button className="login-btn">Enter</button>
+        <div className="img-container">
+          <img src={imageSource} alt="Image" className="img-box" />
+        </div>
+        <div className="login-inputs">
+          <label htmlFor="title">
+            <h1>Login</h1>
+          </label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter your username"
+            required
+            value={usernameText}
+            onChange={(e) => setUserNameText(e.target.value)}
+            className="input-field"
+          />
+          <button className="login-btn">Enter</button>
+        </div>
       </form>
     </div>
   );
