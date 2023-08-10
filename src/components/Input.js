@@ -22,6 +22,10 @@ class Input extends Component {
     this.props.handleImageChange(selectedImage);
   };
 
+  closePreview = () => {
+    this.props.handleImageChange(null); // Clear the selected image
+  };
+
   render() {
     return (
       <div className="input-container">
@@ -48,6 +52,9 @@ class Input extends Component {
           </div>
           {this.props.selectedImage && (
             <div className="image-preview">
+              <span className="close-preview" onClick={this.closePreview}>
+                &times;
+              </span>
               <img
                 src={URL.createObjectURL(this.props.selectedImage)}
                 alt="Preview"
