@@ -22,21 +22,20 @@ const Login = (props) => {
         </div>
         <div className="login-inputs">
           <label htmlFor="title">
-            <h1>
-              <img src={imagePerson} alt="Image" />
-              Stay in touch
+            <h1 className="Login-h1">
+              <img src={imagePerson} alt="Image" className="Img-h1" />{" "}
             </h1>
           </label>
           <input
             type="text"
             id="title"
-            placeholder="Enter your username"
+            placeholder="Username"
             required
             value={usernameText}
             onChange={(e) => setUserNameText(e.target.value)}
             className="input-field"
           />
-          <button className="login-btn">Enter</button>
+          <button className="login-btn">Log in</button>
         </div>
       </form>
     </div>

@@ -54,7 +54,7 @@ class Input extends Component {
               />
             </label>
           </div>
-          <button>Send</button>
+          <button className="send-btn">Send</button>
         </form>
         {this.props.selectedImage && (
           <div className="image-overlay">

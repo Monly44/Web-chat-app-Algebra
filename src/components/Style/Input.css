@@ -97,7 +97,7 @@ form {
   border-radius: 5px;
 }
 
-button {
+.send-btn {
   z-index: 1;
   height: 30px;
   background-color: #4caf50;
@@ -107,10 +107,4 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
 }
