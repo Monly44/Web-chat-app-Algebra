@@ -33,8 +33,9 @@
   scrollbar-width: thin;
   scrollbar-color: #868e96 #f7f7f7;
   background-color: #fff;
-  border-radius: 50px;
-  border: 1px solid #868e96;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.37);
 }
 
 .Messages-list::-webkit-scrollbar {

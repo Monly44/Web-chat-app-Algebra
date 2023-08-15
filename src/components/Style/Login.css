@@ -98,6 +98,7 @@ body {
   margin-bottom: 10px;
 }
 .input-field {
+  color: rgb(78, 78, 78);
   height: 25px;
   width: 75%;
   padding: 8px;

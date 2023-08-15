@@ -40,7 +40,7 @@ class Input extends Component {
               onChange={this.onChange}
               value={this.state.text}
               type="text"
-              placeholder="Enter your message and press ENTER"
+              placeholder="Write your message here"
               autoFocus={true}
             />
             <label htmlFor="file" className="image-upload">
