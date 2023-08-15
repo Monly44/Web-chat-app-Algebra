@@ -1,12 +1,9 @@
 /* Header component styles */
 .App-header {
-  background-color: #262626;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .App-header h1 {
