@@ -1,37 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import Chat from "./components/Chat";
 import Header from "./components/Header";
 import Login from "./components/Login";
-import "./components/Style/Style.css"; // Import your main CSS file here
+import "./components/Style/Style.css";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { username: "" };
-  }
+function App() {
+  const [username, setUsername] = useState("");
+  const [theme, setTheme] = useState("default");
 
-  handleLogin = (username) => {
-    this.setState({ username });
+  const handleLogin = (username) => {
+    setUsername(username);
   };
 
-  handleLogout = () => {
-    this.setState({ username: "" });
+  const handleLogout = () => {
+    setUsername("");
   };
 
-  render() {
-    const { username } = this.state;
+  const toggleTheme = () => {
+    setTheme(theme === "default" ? "dark" : "default");
+  };
 
-    return (
-      <div className="app-container">
-        <Header username={username} handleLogout={this.handleLogout} />
-        {username ? (
-          <Chat username={username} />
-        ) : (
-          <Login onLogin={this.handleLogin} username={username} />
-        )}
-      </div>
-    );
-  }
+  return (
+    <div className={`app-container ${theme}`}>
+      <Header
+        username={username}
+        handleLogout={handleLogout}
+        toggleTheme={toggleTheme}
+        theme={theme}
+      />
+      {username ? (
+        <Chat username={username} />
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
+    </div>
+  );
 }
 
 export default App;
