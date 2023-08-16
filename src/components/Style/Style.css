@@ -38,9 +38,9 @@
   animation-direction: alternate;
 }
 :root {
-  --text-default: #333; /* Default text color for light theme */
-  --text-dark: #ffffff; /* Text color for dark theme */
-  --text-light: #ffffff; /* Text color for light theme */
+  --text-default: #333;
+  --text-dark: #ffffff;
+  --text-light: #ffffff;
 
   --primary-color: #9a75f8;
   --second-color: #ffffff;
@@ -49,7 +49,7 @@
   --button-color-dark: #8657fe;
   --secondary-color: #b090fa;
 
-  --background-light: #ddc9ffbe; /* Background color for light theme */
+  --background-light: #ddc9ffbe;
   --background-dark: #3b2e52be;
 
   --placeholder-light: hsl(0, 0%, 100%);

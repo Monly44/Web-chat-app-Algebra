@@ -10,10 +10,10 @@
 .timestamp {
   display: none;
   position: absolute;
-  bottom: -25px; /* Adjust the spacing */
+  bottom: -20px; /* Adjust the spacing */
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.553);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -39,7 +39,7 @@
   width: 8px;
 }
 .Messages-list::-webkit-scrollbar-thumb {
-  background-color: #f7f7f7;
+  background-color: #ffffffc1;
   border-radius: 8px;
 }
 .Messages-message {
@@ -53,7 +53,10 @@
 }
 
 .Message-content {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 70%;
 }
 
 .currentMember > .Message-content {
@@ -70,7 +73,7 @@
 
 .Message-content > .username {
   display: block;
-  color: gray;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -78,25 +81,16 @@
   letter-spacing: 3px;
 }
 
-.Message-content > .text {
-  padding: 10px;
-  max-width: 400px;
-  margin: 0;
-  border-radius: 12px;
-  background-color: #868e96;
-  color: white;
-  display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 2px;
-}
-
 .currentMember > .Message-content .text {
-  background-color: #262626;
+  background-color: #8775ff;
 }
 .text {
+  max-width: 400px;
+  word-break: break-word;
+  white-space: normal;
   display: inline-block;
   padding: 8px 12px;
-  background-color: #747eee; /* Change to your desired background color */
+  background-color: #b349ff; /* Change to your desired background color */
   color: white;
   border-radius: 16px;
 }

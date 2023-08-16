@@ -25,7 +25,7 @@ function App() {
       <Header
         username={username}
         handleLogout={handleLogout}
-        toggleTheme={toggleTheme} // Pass the toggleTheme function as a prop
+        toggleTheme={toggleTheme}
         theme={theme}
       />
       {username ? (
