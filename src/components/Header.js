@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Style/Header.css";
+import imageMenu from "./Style/list.svg";
 
 const Header = (props) => {
   const isLoggedIn = !!props.username;
@@ -29,7 +30,7 @@ const Header = (props) => {
               className={`dropbtn ${props.theme}`}
               onClick={toggleDropdown}
             >
-              Options
+              <img src={imageMenu} alt="Options" className="image-menu" />
             </button>
             <div
               className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}
