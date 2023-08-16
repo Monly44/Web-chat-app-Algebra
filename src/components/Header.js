@@ -7,7 +7,7 @@ const Header = (props) => {
       {}
       {isLoggedIn && (
         <div className="App-header">
-          <h1>{props.username}'s Chat Room</h1>
+          <h1>Welcome {props.username}</h1>
           <button onClick={props.handleLogout}>Logout</button>
         </div>
       )}

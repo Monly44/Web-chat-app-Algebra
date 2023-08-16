@@ -123,24 +123,24 @@ body {
 }
 .login-btn {
   height: 35px;
-  background-color: #ffffffd1;
+  background-color: #8353ffd1;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.37);
   margin-top: 5px;
-  width: 40%;
+  width: 50%;
   padding: 8px;
-  color: rgb(78, 78, 78);
+  color: rgb(255, 255, 255);
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
 
 .login-btn:hover {
   height: 35px;
-  background-color: #ffffffeb;
+  background-color: #8353ffd1;
   border: 1px solid rgba(229, 218, 218, 0.18);
-  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.37);
+  box-shadow: 2px 2px 3px 0.5px rgba(0, 0, 0, 0.37);
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
