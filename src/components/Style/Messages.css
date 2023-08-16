@@ -32,10 +32,7 @@
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: #868e96 #f7f7f7;
-  background-color: #c4bdd73f;
   border-radius: 20px;
-  border: 1px solid rgba(142, 142, 142, 0.18);
-  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.188);
 }
 
 .Messages-list::-webkit-scrollbar {

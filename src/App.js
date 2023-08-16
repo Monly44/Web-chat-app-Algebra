@@ -25,11 +25,11 @@ function App() {
       <Header
         username={username}
         handleLogout={handleLogout}
-        toggleTheme={toggleTheme}
+        toggleTheme={toggleTheme} // Pass the toggleTheme function as a prop
         theme={theme}
       />
       {username ? (
-        <Chat username={username} />
+        <Chat username={username} theme={theme} />
       ) : (
         <Login onLogin={handleLogin} />
       )}

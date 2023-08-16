@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // Add this import statement
 import "./Style/Input.css";
 import imageIcon from "./Style/image.svg";
 import imageSend from "./Style/send.svg";
+import "./Style/Style.css";
 
 class Input extends Component {
   state = {
@@ -32,11 +33,28 @@ class Input extends Component {
       ? "input-container"
       : "input-container overlay-active";
 
+    const inputContainerBackgroundColor =
+      this.props.theme === "dark"
+        ? "var(--background-dark)"
+        : "var(--background-light)";
+
     const inputTextColor =
       this.props.theme === "dark" ? "var(--text-light)" : "var(--text-dark)";
 
+    const placeholderColor =
+      this.props.theme === "dark"
+        ? "var(--placeholder-dark)"
+        : "var(--placeholder-light)";
+
+    console.log("Theme prop value:", this.props.theme);
+
     return (
-      <div className={inputContainerClassName}>
+      <div
+        className={`${inputContainerClassName} ${
+          this.props.theme === "dark" ? "dark" : ""
+        }`}
+        style={{ backgroundColor: inputContainerBackgroundColor }}
+      >
         <form onSubmit={this.onSubmit}>
           <div className="input-wrapper">
             <input
@@ -46,7 +64,10 @@ class Input extends Component {
               type="text"
               placeholder="Write your message here"
               autoFocus={true}
-              style={{ color: inputTextColor }}
+              style={{
+                color: inputTextColor,
+                "--placeholder-color": placeholderColor, // Add this line
+              }}
             />
             <label htmlFor="file" className="image-upload">
               <img src={imageIcon} alt="Upload" className="image-icon" />
