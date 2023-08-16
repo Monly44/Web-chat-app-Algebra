@@ -22,10 +22,10 @@
 }
 
 .Messages-list {
-  padding: 20px 0;
+  padding: 25px 0;
   max-width: 900px;
   width: 100%;
-  margin: 20px auto;
+  margin: 5px auto;
   list-style: none;
   padding-left: 0;
   height: 70vh;
@@ -98,21 +98,16 @@
 }
 .text {
   display: inline-block;
-  padding: 8px 12px; /* Add padding to the text bubble */
-  background-color: #4caf50; /* Change to your desired background color */
-  color: white; /* Change to your desired text color */
-  border-radius: 16px; /* Add rounded corners */
+  padding: 8px 12px;
+  background-color: #747eee; /* Change to your desired background color */
+  color: white;
+  border-radius: 16px;
 }
-/* Add this to your Messages.css */
-/* ... (existing styles) */
 
-/* Style for sent images */
 .image-sent img {
-  max-width: 200px; /* Set the desired max width for sent images */
-  max-height: 200px; /* Set the desired max height for sent images */
-  border-radius: 8px; /* Add rounded corners to sent images */
-  object-fit: cover; /* Ensure the image fills the container while preserving aspect ratio */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* ... (existing styles) */
