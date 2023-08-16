@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./Style/Header.css";
 
 const Header = (props) => {
   const isLoggedIn = !!props.username;
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const getPrimaryColor = () => {
-    return props.theme === "dark"
-      ? "--primary-color-dark"
-      : "--primary-color-default";
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const getSecondaryColor = () => {
-    return props.theme === "dark"
-      ? "--secondary-color-dark"
-      : "--secondary-color-default";
+  const closeDropdownWithDelay = () => {
+    setIsDropdownOpen(false);
+    setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 300);
   };
 
   return (
@@ -25,14 +26,15 @@ const Header = (props) => {
           </h1>
           <div className="dropdown">
             <button
-              className="dropbtn"
-              style={{ backgroundColor: `var(${getPrimaryColor()})` }}
+              className={`dropbtn ${props.theme}`}
+              onClick={toggleDropdown}
             >
               Options
             </button>
             <div
-              className="dropdown-content"
-              style={{ backgroundColor: `var(${getSecondaryColor()})` }}
+              className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}
+              ref={dropdownRef}
+              onClick={(e) => e.stopPropagation()}
             >
               <button onClick={props.toggleTheme}>Toggle Theme</button>
               <button onClick={props.handleLogout}>Logout</button>

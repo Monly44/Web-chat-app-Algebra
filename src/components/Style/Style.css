@@ -36,9 +36,18 @@
   animation-direction: alternate;
 }
 :root {
-  --text-default: rgb(55, 55, 55);
-  --text-dark: #e0e0e0;
+  --text-default: #333; /* Default text color for light theme */
+  --text-dark: #fff; /* Text color for dark theme */
+  --text-light: #000; /* Text color for light theme */
+
+  --primary-color: #9a75f8;
+  --second-color: #ffffff;
+
+  --button-color-default: #9a74fc;
+  --button-color-dark: #8657fe;
+  --secondary-color: #b090fa;
 }
+
 @keyframes gradient {
   0% {
     background-position: 0%;

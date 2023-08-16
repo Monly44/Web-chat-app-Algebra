@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Style/Input.css";
-import imageIcon from "./Style/plus-circle-fill.svg"; // Provide the path to your image
+import imageIcon from "./Style/image.svg";
+import imageSend from "./Style/send.svg";
 
 class Input extends Component {
   state = {
@@ -23,13 +24,16 @@ class Input extends Component {
   };
 
   closePreview = () => {
-    this.props.handleImageChange(null); // Clear the selected image
+    this.props.handleImageChange(null);
   };
 
   render() {
     const inputContainerClassName = this.props.selectedImage
       ? "input-container"
       : "input-container overlay-active";
+
+    const inputTextColor =
+      this.props.theme === "dark" ? "var(--text-light)" : "var(--text-dark)";
 
     return (
       <div className={inputContainerClassName}>
@@ -42,6 +46,7 @@ class Input extends Component {
               type="text"
               placeholder="Write your message here"
               autoFocus={true}
+              style={{ color: inputTextColor }}
             />
             <label htmlFor="file" className="image-upload">
               <img src={imageIcon} alt="Upload" className="image-icon" />
@@ -54,7 +59,10 @@ class Input extends Component {
               />
             </label>
           </div>
-          <button className="send-btn">Send</button>
+          <button className="send-btn">
+            {" "}
+            <img src={imageSend} alt="Send" className="image-send" />
+          </button>
         </form>
         {this.props.selectedImage && (
           <div className="image-overlay">
