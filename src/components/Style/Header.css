@@ -11,6 +11,7 @@
   margin: 0 auto;
 }
 .App-header h1 {
+  font-family: "Kalam", cursive;
   font-size: 28px;
   margin: 0;
   color: var(--text-default);
