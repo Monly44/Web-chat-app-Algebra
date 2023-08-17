@@ -1,1 +1,2 @@
-ChatApp in progress (Završni rad)
+Web chat app 
+https://web-chat-app-algebra.vercel.app/web-chat-app/
