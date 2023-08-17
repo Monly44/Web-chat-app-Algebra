@@ -39,10 +39,10 @@
 }
 
 :root {
-  --text-default: #9063ff;
+  --text-default: #7c36ff83;
   --button-color-default: #9a74fc27;
   --button-color-dark: #8657fe6c;
-  --secondary-color: #bda1ff98;
+  --secondary-color: #ad8aff98;
 }
 :root {
   --background-light: #ffffff77;

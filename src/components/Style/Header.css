@@ -43,7 +43,7 @@
 }
 
 .dropbtn:hover {
-  background-color: rgba(165, 124, 241, 0.677);
+  background-color: rgba(165, 124, 241, 0.573);
 }
 
 .dropdown-content {
@@ -76,7 +76,7 @@
 }
 
 .dropdown-content button:hover {
-  background-color: hsl(255, 100%, 85%);
+  background-color: hsla(255, 100%, 83%, 0.793);
 }
 
 .dropdown:hover .dropdown-content {
@@ -86,10 +86,6 @@
 /* Responsive design */
 
 @media screen and (max-width: 600px) {
-  .App-header h1 {
-    font-size: 20px;
-  }
-
   .dropbtn {
     padding: 6px 40px;
     font-size: 10px;
@@ -113,15 +109,6 @@
     align-items: center;
     max-width: 900px;
     margin: 0 auto;
-  }
-
-  .App-header h1 {
-    font-size: 24px;
-    margin: 0;
-    color: var(--text-default);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   .App-header.dark h1 {
