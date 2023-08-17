@@ -4,9 +4,11 @@ import "./Style/Messages.css";
 class Messages extends React.Component {
   render() {
     const { messages } = this.props;
+    const reversedMessages = messages.slice().reverse();
+
     return (
       <ul className="Messages-list">
-        {messages.map((m) => this.renderMessage(m))}
+        {reversedMessages.map((m) => this.renderMessage(m))}
       </ul>
     );
   }
@@ -15,7 +17,7 @@ class Messages extends React.Component {
     const { member, text, timestamp } = message;
     const { currentMember } = this.props;
     const messageFromMe = member.id === currentMember.id;
-    const isImage = text.startsWith("data:image/"); // Check if the message is an image
+    const isImage = text.startsWith("data:image/");
     const className = messageFromMe
       ? "Messages-message currentMember"
       : "Messages-message";
@@ -25,6 +27,10 @@ class Messages extends React.Component {
       hour: "2-digit",
       minute: "2-digit",
     });
+
+    const capitalizedUsername =
+      member.clientData.username.charAt(0).toUpperCase() +
+      member.clientData.username.slice(1);
 
     return (
       <li
@@ -36,7 +42,7 @@ class Messages extends React.Component {
           style={{ backgroundColor: member.clientData.color }}
         />
         <div className="Message-content">
-          <div className="username">{member.clientData.username}</div>
+          <div className="username">{capitalizedUsername}</div>
           <div className="text-container">
             {isImage ? (
               <div className="image-sent">

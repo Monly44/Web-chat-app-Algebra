@@ -129,3 +129,13 @@ form {
 .Input-msg.dark::placeholder {
   color: var(--placeholder-dark);
 }
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .input-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .input-container {
+    width: 80%;
+  }
+}

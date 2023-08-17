@@ -1,9 +1,8 @@
-import React, { Component } from "react"; // Add this import statement
+import React, { Component } from "react";
 import "./Style/Input.css";
 import imageIcon from "./Style/image.svg";
 import imageSend from "./Style/send.svg";
 import "./Style/Style.css";
-
 class Input extends Component {
   state = {
     text: "",
@@ -15,8 +14,13 @@ class Input extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.onSendMessage(this.state.text);
-    this.setState({ text: "" });
+
+    if (this.state.text.trim() !== "") {
+      this.props.onSendMessage(this.state.text);
+      this.setState({ text: "" });
+    } else if (this.props.selectedImage) {
+      this.props.onSendImage(this.props.selectedImage);
+    }
   };
 
   handleImageChange = (e) => {
@@ -46,8 +50,6 @@ class Input extends Component {
         ? "var(--placeholder-dark)"
         : "var(--placeholder-light)";
 
-    console.log("Theme prop value:", this.props.theme);
-
     return (
       <div
         className={`${inputContainerClassName} ${
@@ -66,7 +68,7 @@ class Input extends Component {
               autoFocus={true}
               style={{
                 color: inputTextColor,
-                "--placeholder-color": placeholderColor, // Add this line
+                "--placeholder-color": placeholderColor,
               }}
             />
             <label htmlFor="file" className="image-upload">
@@ -80,8 +82,7 @@ class Input extends Component {
               />
             </label>
           </div>
-          <button className="send-btn">
-            {" "}
+          <button className="send-btn" type="submit">
             <img src={imageSend} alt="Send" className="image-send" />
           </button>
         </form>

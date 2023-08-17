@@ -9,8 +9,8 @@
     45deg,
     #4802faa4,
     #963cea85,
-    #3c82f375,
-    #4d72f97a,
+    #4e8beb75,
+    #5b7cf67a,
     #6248f47b,
     #6e13eea1
   );
@@ -37,25 +37,29 @@
   animation: gradient 20s linear infinite;
   animation-direction: alternate;
 }
+
 :root {
-  --text-default: #333;
-  --text-dark: #ffffff;
-  --text-light: #ffffff;
-
-  --primary-color: #9a75f8;
-  --second-color: #ffffff;
-
-  --button-color-default: #9a74fc;
-  --button-color-dark: #8657fe;
-  --secondary-color: #bda1ff;
-
-  --background-light: #ddc9ffbe;
-  --background-dark: #3b2e52be;
-
-  --placeholder-light: hsl(0, 0%, 100%);
-  --placeholder-dark: #d6d6d6;
+  --text-default: #4718b5ab;
+  --button-color-default: #9a74fc27;
+  --button-color-dark: #8657fe6c;
+  --secondary-color: #bda1ff98;
+}
+:root {
+  --background-light: #ffffff77;
+  --text-dark: #303030;
+  --placeholder-light: #47474785;
 }
 
+.dark {
+  --background-light: #ffffff42;
+  --text-dark: #ffffffc6;
+  --placeholder-light: #ffffff9c;
+}
+
+body {
+  margin: 0;
+  font-family: cursive;
+}
 @keyframes gradient {
   0% {
     background-position: 0%;

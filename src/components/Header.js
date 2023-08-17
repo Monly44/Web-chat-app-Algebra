@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./Style/Header.css";
+import "./Style/Header.css"; // Import your Header.css
 import imageMenu from "./Style/list.svg";
 
 const Header = (props) => {
@@ -18,27 +18,33 @@ const Header = (props) => {
     }, 300);
   };
 
+  const formattedUsername = isLoggedIn
+    ? props.username.charAt(0).toUpperCase() + props.username.slice(1)
+    : "";
+
   return (
     <>
       {isLoggedIn && (
         <div className={`App-header ${props.theme}`}>
-          <h1 className={`header-text ${props.theme}`}>
-            Welcome {props.username}
-          </h1>
-          <div className="dropdown">
-            <button
-              className={`dropbtn ${props.theme}`}
-              onClick={toggleDropdown}
-            >
-              <img src={imageMenu} alt="Options" className="image-menu" />
-            </button>
-            <div
-              className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}
-              ref={dropdownRef}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button onClick={props.toggleTheme}>Toggle Theme</button>
-              <button onClick={props.handleLogout}>Logout</button>
+          <div className="header-content">
+            <h1 className={`header-text ${props.theme}`}>
+              Welcome {formattedUsername}
+            </h1>
+            <div className="dropdown">
+              <button
+                className={`dropbtn ${props.theme}`}
+                onClick={toggleDropdown}
+              >
+                <img src={imageMenu} alt="Options" className="image-menu" />
+              </button>
+              <div
+                className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}
+                ref={dropdownRef}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button onClick={props.toggleTheme}>Toggle Theme</button>
+                <button onClick={props.handleLogout}>Logout</button>
+              </div>
             </div>
           </div>
         </div>
