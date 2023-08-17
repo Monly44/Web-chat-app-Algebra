@@ -10,7 +10,7 @@
 .timestamp {
   display: none;
   position: absolute;
-  bottom: -37px; /* Adjust the spacing */
+  bottom: -37px; 
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.368);
@@ -91,7 +91,7 @@
   white-space: normal;
   display: inline-block;
   padding: 8px 12px;
-  background-color: #b349ff; /* Change to your desired background color */
+  background-color: #b349ff;
   color: white;
   border-radius: 16px;
 }
@@ -103,7 +103,4 @@
   object-fit: cover;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 601px) and (max-width: 900px) {
-}
-@media screen and (max-width: 600px) {
-}
+

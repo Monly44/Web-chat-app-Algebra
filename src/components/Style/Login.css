@@ -1,4 +1,3 @@
-/* Login.css */
 body {
   overflow: hidden;
 }
@@ -70,7 +69,7 @@ body {
 }
 
 .login-inputs {
-  padding: 10px 20px 40px; /* Adjusted padding */
+  padding: 10px 20px 40px; 
   flex: 1.5;
   display: flex;
   flex-direction: column;
@@ -94,7 +93,7 @@ body {
   align-items: center;
 }
 .Img-h1 {
-  height: 90px; /* Adjust the size of the image as needed */
+  height: 90px;
   margin-bottom: 10px;
 }
 .input-field {
@@ -176,7 +175,7 @@ body {
   }
 
   .login-inputs {
-    padding: 10px 20px 40px; /* Adjusted padding */
+    padding: 10px 20px 40px;
     border-radius: 0 10px 10px 0;
     align-items: center;
   }

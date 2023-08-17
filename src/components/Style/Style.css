@@ -1,7 +1,5 @@
-@import "./Input.css";
-
 .app-container {
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -20,7 +18,7 @@
 }
 
 .app-container.dark {
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -36,6 +34,15 @@
   background-size: 600% 100%;
   animation: gradient 20s linear infinite;
   animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 :root {
@@ -56,41 +63,12 @@
   --placeholder-light: #ffffff9c;
 }
 
-body {
-  margin: 0;
-  font-family: cursive;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
 .App {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-
-/* Responsive media queries */
-@media screen and (max-width: 600px) {
-  .Messages-list {
-    width: 80%;
-  }
-}
-
-/* Mobile Landscape */
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  .Messages-list {
-    width: 80%;
-  }
-}
-/* Tablet Portrait */
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .Messages-list {
-    width: 80%;
-  }
+body {
+  margin: 0;
+  font-family: cursive;
 }

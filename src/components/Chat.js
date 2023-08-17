@@ -96,7 +96,7 @@ class Chat extends React.Component {
         />
         <Input
           onSendMessage={this.onSendMessage}
-          handleImageChange={this.handleImageChange} // Pass the handler
+          handleImageChange={this.handleImageChange}
         />
       </div>
     );

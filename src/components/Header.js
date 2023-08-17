@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./Style/Header.css"; // Import your Header.css
+import "./Style/Header.css";
 import imageMenu from "./Pictures/list.svg";
 
 const Header = (props) => {
