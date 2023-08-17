@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Style/Input.css";
-import imageIcon from "./Style/image.svg";
-import imageSend from "./Style/send.svg";
+import imageIcon from "./Pictures/image.svg";
+import imageSend from "./Pictures/send.svg";
 import "./Style/Style.css";
 class Input extends Component {
   state = {

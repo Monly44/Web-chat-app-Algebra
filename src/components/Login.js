@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Style/Login.css";
-import imageSource from "./Style/login.png";
-import imagePerson from "./Style/person-circle.svg";
+import imageSource from "./Pictures/login.png";
+import imagePerson from "./Pictures/person-circle.svg";
 
 const Login = (props) => {
   const [usernameText, setUserNameText] = useState("");

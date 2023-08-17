@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Style/Header.css"; // Import your Header.css
-import imageMenu from "./Style/list.svg";
+import imageMenu from "./Pictures/list.svg";
 
 const Header = (props) => {
   const isLoggedIn = !!props.username;
