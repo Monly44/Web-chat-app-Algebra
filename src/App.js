@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Chat from "./components/Chat";
 import Header from "./components/Header";
 import Login from "./components/Login";
-import "./components/Style/Style.css";
+import "../src/Style/Style.css";
 
 function App() {
   const [username, setUsername] = useState("");

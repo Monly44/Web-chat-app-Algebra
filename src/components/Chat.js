@@ -1,7 +1,7 @@
 import React from "react";
 import Messages from "./Messages";
 import Input from "./Input";
-import "./Style/Style.css";
+import "../../src/Style/Style.css";
 
 const predefinedColors = [
   "#9B7EDE",

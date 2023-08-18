@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import "./Style/Input.css";
+import "../../src/Style/Input.css";
 import imageIcon from "./Pictures/image.svg";
 import imageSend from "./Pictures/send.svg";
-import "./Style/Style.css";
-
+import "../../src/Style/Style.css";
 
 class Input extends Component {
   state = {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Style/Login.css";
+import "../../src/Style/Login.css";
 import imageSource from "./Pictures/login.png";
 import imagePerson from "./Pictures/person-circle.svg";
 
